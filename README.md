@@ -1,5 +1,8 @@
 # Pokémon Card List App 🧩
 
+📝 Note
+This README.md summary was generated with the help of ChatGPT for formatting and presentation clarity. However, all the application code, architecture, logic, and implementation were entirely written and developed by me.
+
 A Flutter-based Pokémon card listing application built for the **Lead Flutter Developer Assignment**. This app demonstrates clean architecture, Bloc state management, API integration, dependency injection, and unit testing.
 
 ## 🎥 Demo Video
