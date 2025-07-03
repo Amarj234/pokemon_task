@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:pokemon_card_list/core/injection.dart';
 import 'package:shimmer/shimmer.dart';
 
 import '../utils/load_state.dart';
@@ -35,12 +36,12 @@ class _PokemonListPageState extends State<PokemonListPage> {
   }
 
   void _loadInitialData() {
-    context.read<PokemonBloc>().add(PokemonEvent.fetchCards(_currentPage));
+    sl<PokemonBloc>().add(PokemonEvent.fetchCards(_currentPage));
   }
 
   void _loadMore() {
     _currentPage++;
-    context.read<PokemonBloc>().add(PokemonEvent.fetchCards(_currentPage));
+    sl<PokemonBloc>().add(PokemonEvent.fetchCards(_currentPage));
   }
 
   TextEditingController _searchController = TextEditingController();
