@@ -137,10 +137,9 @@ class _PokemonListPageState extends State<PokemonListPage> {
           return GestureDetector(
             onTap: () {
               print(card?.attacks);
-              Navigator.pushNamed(
-                context,
-                RoutePaths.details,
-                arguments: PokemonDetailArguments(cardData: card!),
+             AppRoutes.router.go(
+                AppRoutes.details,
+                extra: card, // Pass the card data to the details page
               );
             },
             child: Card(

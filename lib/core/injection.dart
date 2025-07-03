@@ -18,7 +18,7 @@ void init() {
 
   // Repository binding (IMPORTANT!)
   sl.registerLazySingleton<PokemonRepository>(
-    () => PokemonRepositoryImpl(sl<ApiService>()),
+    () => PokemonRepositoryImpl(),
   );
 
   // Bloc

@@ -24,15 +24,15 @@ class MyApp extends StatelessWidget {
               sl<PokemonBloc>()..add(const PokemonEvent.fetchCards(1)),
         ),
       ],
-      child: MaterialApp(
+      child: MaterialApp.router(
+        routerConfig: AppRoutes.router,
         title: 'Pokémon Card List',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.red,
           scaffoldBackgroundColor: Colors.white,
         ),
-        initialRoute: RoutePaths.splash,
-        onGenerateRoute: AppRouter.generateRoute,
+       
       ),
     );
   }

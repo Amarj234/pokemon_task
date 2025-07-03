@@ -4,9 +4,7 @@ import '../service/api_service.dart';
 import 'pokemon_repository.dart';
 
 class PokemonRepositoryImpl implements PokemonRepository {
-  final ApiService api;
 
-  PokemonRepositoryImpl(this.api);
 
   @override
   Future<PokemonEntity?> getCards(int page) async {

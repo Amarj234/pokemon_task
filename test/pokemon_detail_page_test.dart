@@ -18,7 +18,7 @@ void main() {
       '60', // hp
       ['Grass'], // types
       null, // evolvesFrom
-      null, // abilities (you passed attacks here by mistake)
+      null, // abilities
       [
         // attacks
         PokemonDataAttacksEntity(

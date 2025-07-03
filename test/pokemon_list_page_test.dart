@@ -7,7 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pokemon_card_list/screen/pokemon_list_page.dart';
 import 'package:pokemon_card_list/screen/bloc/pokemon_bloc.dart';
 import 'package:pokemon_card_list/screen/bloc/pokemon_event.dart';
-import 'package:pokemon_card_list/data/service/api_service.dart';
+
 import 'package:pokemon_card_list/data/repositories/pokemon_repository_impl.dart';
 
 void main() {
@@ -38,8 +38,8 @@ void main() {
     );
 
     // Create real ApiService and Repo
-    final apiService = ApiService(dio);
-    final repository = PokemonRepositoryImpl(apiService);
+
+    final repository = PokemonRepositoryImpl();
     final bloc = PokemonBloc(repository: repository);
 
     // Dispatch fetch event manually
